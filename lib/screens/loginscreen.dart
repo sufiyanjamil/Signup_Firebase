@@ -32,12 +32,10 @@ class Loginscreen extends StatelessWidget {
               ),
               Form(
                 key: _formkey,
+                child:Padding(const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
-                    Container(
-                      padding: const EdgeInsets.only(
-                          left: 20, right: 20, top: 20, bottom: 10),
-                      child: TextFormField(
+                    TextFormField(
                         controller: emailcontroller,
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -71,11 +69,10 @@ class Loginscreen extends StatelessWidget {
                           labelStyle: TextStyle(color: Colors.black),
                         ),
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.only(
-                          left: 20, right: 20, top: 20, bottom: 10),
-                      child: TextFormField(
+                     const SizedBox(
+                height: 30,
+              ),
+                  TextFormField(
                         controller: passwordcontroller,
                         obscureText: true,
                         validator: (value) {
@@ -113,7 +110,7 @@ class Loginscreen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+        ),
               const SizedBox(
                 height: 40,
               ),
